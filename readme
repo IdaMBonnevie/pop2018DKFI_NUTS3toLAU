@@ -1,0 +1,12 @@
+This repository contains R code and data to apply dasymetric refinement of 2018 population at regional NUTS3 level to model 2018 population and municipality (LAU) level - for Denmark and Finland respectively. 
+
+The weighting folder contains R code to calculate input weights for respectively Denmark and Finland by mapping Corine land cover 2018 classes to EU census grid 2021 to calculate average per-CORINE-class population density-based weights.  
+The dasymetric mapping folder contains the code to use the input weights and input data to carry out the dasymetric refinement. Resulting maps are created in R with tmap.  
+
+Data	Download source  
+1. Source data version A: Danish 2018 Population (5781190 people covering app. 41.6 km2) distributed out on 11 NUTS3 regions.	Eurostat R package (accessed in January 2025). 
+2. Source data version B: Finnish 2018 Population (5513130 people covering app. 304.0 km2) distributed out on 19 NUTS3 regions.	Eurostat R package (accessed in January 2025).
+3. Ancillary data for weighting part A: EU Population Census Grid 2021. 	Eurostat link: https://ec.europa.eu/eurostat/web/gisco/geodata/population-distribution/geostat (accessed in June 2024).
+4. Ancillary data for weighting part B: CORINE land cover 2018.	Copernicus link: https://land.copernicus.eu/en/products/corine-land-cover/clc2018#download (accessed in January 2025). 
+5. Target zones and quality control data: 2018 Population at municipality level (Local Areal Unit).	Eurostat link: https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units/local-administrative-units (accessed in June 2024);  Eurostat link: https://ec.europa.eu/eurostat/web/nuts/local-administrative-units (accessed in June 2024). The tabular information and spatial dataset has been joined together in QGIS. 
+6. Quality control data for Denmark: The Danish Central Register of Buildings and Dwellings (BBR) from 2018.	Available from the Danish Data Supply: https://dataforsyningen.dk/data/3829 but accessed through LIFA OIS service (accessed in January 2025). 
